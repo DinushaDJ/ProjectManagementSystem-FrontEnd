@@ -1,0 +1,14 @@
+<div class="row mt-5">
+  <div class="col-md-4 mb-3" *ngFor="let phase of phases">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">{{phase.name}}</h5>
+        <p class="card-text">{{phase.description}}</p>
+        <button (click)="getPhaseTasks(phase._id)" class="btn btn-info" >View Tasks</button>
+      </div>
+      <div class="card-footer text-muted">
+        Deadline: {{phase.end_date | date:'shortDate'}}
+      </div>
+    </div>
+  </div>
+</div>
